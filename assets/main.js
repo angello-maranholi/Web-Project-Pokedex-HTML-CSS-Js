@@ -1,11 +1,11 @@
 
-console.log("Js carregado com sucesso!");
+// fetch API é uma interface mais moderna e integrada nos browsres mais modernos
 
+const offset = 0;
+const limit = 20;
+const url = `https://pokeapi.com/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
-/*
-<script>
-        const botaoTeste = document.getElementById('botaoTeste');
-        botaoTeste.addEventListener('click', () => {
-            alert('Botão clicado!');
-        });
-    </script> */
+fetch(url)
+     .then(function (response) {
+         console.log(response)
+     })
