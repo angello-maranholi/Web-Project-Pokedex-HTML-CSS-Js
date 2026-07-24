@@ -1,11 +1,10 @@
 
 // fetch API é uma interface mais moderna e integrada nos browsres mais modernos
+// é a forma de consumo de API padrão no Js, pode ser utilizada em sistemas construidos em 
+// Angular, React, Vue, NodeJs, etc.
+// Sistemas BackEnd construídos em linguagens como Java e C#, utilizam outros métodos como padrão.
 
-const offset = 0;
-const limit = 20;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
-
-function convertPokemonToLi(pokemon) {
+function PokemonToLi(pokemon) {
     return ` 
         <li class="pokemon">
             <span class="number">#001</span>
@@ -24,13 +23,33 @@ function convertPokemonToLi(pokemon) {
 
 const pokemonList = document.getElementById('pokemonList')
 
-fetch(url)
-    .then((response) => response.json())
-    .then((jsonBody) => jsonBody.results)
+pokeApi.getPokemons()
     .then((pokemons) => {
+        const listItem = []
+        
         for (let i = 0; i < pokemons.length; i++) {
             const pokemon = pokemons[i];
-            pokemonList.innerHTML += convertPokemonToLi(pokemon);
+            listItem.push(PokemonToLi(pokemon));
+            
+            console.log(listItem)
+            //pokemonList.innerHTML += PokemonToLi(pokemon);
         }
-    })
-    
+})
+  
+// teste de assincronismo
+const a = 10;
+const b = 5;
+const c = `O resultado de ${a} + ${b} é igual a ${ a + b}`;
+console.log(c);
+
+// fetch(url)
+//versão mais curta:
+//     .then((response) => response.json())
+//     .then((jsonBody) => jsonBody.results)
+//     .then((pokemonList) => console.log(pokemonList))
+//versão mais longa:
+// .then(function (response) {
+//     response.json()
+//         .then(function(responseBody){
+//             console.log(responseBody);
+// })
