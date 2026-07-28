@@ -1,9 +1,4 @@
 
-// fetch API é uma interface mais moderna e integrada nos browsres mais modernos
-// é a forma de consumo de API padrão no Js, pode ser utilizada em sistemas construidos em 
-// Angular, React, Vue, NodeJs, etc.
-// Sistemas BackEnd construídos em linguagens como Java e C#, utilizam outros métodos como padrão.
-
 function PokemonToLi(pokemon) {
     return ` 
         <li class="pokemon">
@@ -32,9 +27,11 @@ pokeApi.getPokemons()
             listItem.push(PokemonToLi(pokemon));
             
             console.log(listItem)
-            //pokemonList.innerHTML += PokemonToLi(pokemon);
+            pokemonList.innerHTML += listItem[i];
         }
 })
+
+//CONTINUAR A PARTIR DA FUNÇÃO MAP 
   
 // teste de assincronismo
 const a = 10;
