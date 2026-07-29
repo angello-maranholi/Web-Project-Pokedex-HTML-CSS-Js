@@ -20,33 +20,31 @@ const pokemonList = document.getElementById('pokemonList')
 
 pokeApi.getPokemons()
     .then((pokemons) => {
-        const listItem = []
         
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            listItem.push(PokemonToLi(pokemon));
-            
-            console.log(listItem)
-            pokemonList.innerHTML += listItem[i];
-        }
-})
+        // função FOR (loop)
+        //const listItem = []
 
-//CONTINUAR A PARTIR DA FUNÇÃO MAP 
+        // for (let i = 0; i < pokemons.length; i++) {
+        //     const pokemon = pokemons[i];
+        //     listItem.push(PokemonToLi(pokemon));
+        //     console.log(listItem)
+        // }
+
+        //função MAP - para substituir o for
+        // const listItem = pokemons.map((pokemon) => {
+        //     return PokemonToLi(pokemon);
+        // })
+
+        //simplificando o MAP
+        const listItem = pokemons.map(pokemon => PokemonToLi(pokemon))
+        console.log(listItem)
+        //simplificando mais ainda o MAP
+
+        pokemonList.innerHTML += listItem;
+})
   
 // teste de assincronismo
 const a = 10;
 const b = 5;
 const c = `O resultado de ${a} + ${b} é igual a ${ a + b}`;
 console.log(c);
-
-// fetch(url)
-//versão mais curta:
-//     .then((response) => response.json())
-//     .then((jsonBody) => jsonBody.results)
-//     .then((pokemonList) => console.log(pokemonList))
-//versão mais longa:
-// .then(function (response) {
-//     response.json()
-//         .then(function(responseBody){
-//             console.log(responseBody);
-// })
