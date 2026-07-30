@@ -2,7 +2,7 @@
 function PokemonToLi(pokemon) {
     return ` 
         <li class="pokemon">
-            <span class="number">#001</span>
+            <span class="number"> #001</span>
             <span class="name">${pokemon.name}</span>
               
             <div class="detail">
@@ -18,8 +18,7 @@ function PokemonToLi(pokemon) {
 
 const pokemonList = document.getElementById('pokemonList')
 
-pokeApi.getPokemons()
-    .then((pokemons) => {
+pokeApi.getPokemons().then((pokemons = []) => {
         
         // função FOR (loop)
         //const listItem = []
@@ -36,15 +35,12 @@ pokeApi.getPokemons()
         // })
 
         //simplificando o MAP
-        const listItem = pokemons.map(pokemon => PokemonToLi(pokemon))
-        console.log(listItem)
-        //simplificando mais ainda o MAP
+        // const listItem = pokemons.map(pokemon => PokemonToLi(pokemon))
+        // console.log(listItem)
+        // pokemonList.innerHTML += listItem;
 
-        pokemonList.innerHTML += listItem;
+        //simplificando mais ainda o MAP - por padrão cada item percorrido pelo MAP é convertido diretamente em um item HTML da lista, sem precisar criar uma variável para adicionar. De forma mais simples ainda, o join ja executa a junção dos itens sem a vírgula de forma direta, eliminando a criação de outra variável, e tudo isso é passado diretamente para o innerHTMl, que tem a função de inserir o conteúdo manipulado aqui diretamente no corpo do HTML da página, através da ID do elemento, neste caso a pokemonList. 
+        pokemonList.innerHTML += pokemons.map(PokemonToLi).join('');
+       console.log(pokemonList)
 })
   
-// teste de assincronismo
-const a = 10;
-const b = 5;
-const c = `O resultado de ${a} + ${b} é igual a ${ a + b}`;
-console.log(c);
