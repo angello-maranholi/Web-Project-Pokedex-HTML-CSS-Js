@@ -1,16 +1,26 @@
 
+function pokeTypesToLi (types) {
+    return types.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
+}
+
+//APLICANDO A FORMA SIMPLIFICADA DA IMAGEM SEM PRECISAR CRIAR A FUNÇÃO 
+// function pokeImgToLi (pokemon){
+//     return `<img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}">`
+// }
+
+// ${pokeImgToLi(pokemon)} - a ser colocado dentro do Li com a função pokeImgToLi
+
 function PokemonToLi(pokemon) {
     return ` 
         <li class="pokemon">
-            <span class="number"> #001</span>
+            <span class="number">#${pokemon.order}</span>
             <span class="name">${pokemon.name}</span>
               
             <div class="detail">
                 <ol class="types">
-                    <li class="type">Grass</li>
-                    <li class="type">Poison</li>
+                    ${pokeTypesToLi(pokemon.types).join('')}
                 </ol>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
+                    <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}">  
             </div>
         </li>
     `
@@ -41,6 +51,6 @@ pokeApi.getPokemons().then((pokemons = []) => {
 
         //simplificando mais ainda o MAP - por padrão cada item percorrido pelo MAP é convertido diretamente em um item HTML da lista, sem precisar criar uma variável para adicionar. De forma mais simples ainda, o join ja executa a junção dos itens sem a vírgula de forma direta, eliminando a criação de outra variável, e tudo isso é passado diretamente para o innerHTMl, que tem a função de inserir o conteúdo manipulado aqui diretamente no corpo do HTML da página, através da ID do elemento, neste caso a pokemonList. 
         pokemonList.innerHTML += pokemons.map(PokemonToLi).join('');
-       console.log(pokemonList)
+       //Js Es6+ aplicado
 })
   

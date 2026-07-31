@@ -10,8 +10,10 @@ pokeApi.getPokemons = (offset = 0, limit = 20) => {
     return fetch(url)
             .then((response) => response.json())
             .then((jsonBody) => jsonBody.results)
+            //entender o que ta aqui em baixo...
             .then((pokemons) => pokemons.map((pokeApi.getDetails)))
             .then((detailRequests) => Promise.all(detailRequests))
+            .then((pokeDetails) => pokeDetails);
 }
 
 // Promisse.all(
