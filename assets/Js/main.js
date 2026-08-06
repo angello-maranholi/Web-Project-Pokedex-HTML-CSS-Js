@@ -1,7 +1,7 @@
 
-function pokeTypesToLi (types) {
-    return types.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
-}
+// function pokeTypesToLi (types) {
+//     return types.map((typeSlot) => ``)
+// }
 
 //FUNÇÃO PARA ADICIONAR A IMAGEM - Substituída por script direto no corpo do HTML 
 // function pokeImgToLi (pokemon){
@@ -11,14 +11,15 @@ function pokeTypesToLi (types) {
 function PokemonToLi(pokemon) {
     return ` 
         <li class="pokemon">
-            <span class="number">#${pokemon.order}</span>
+            <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
               
             <div class="detail">
                 <ol class="types">
-                    ${pokeTypesToLi(pokemon.types).join('')}
+                    <li class="type">${pokemon.type}</li>
+                    <li class="type">${pokemon.types}</li>
                 </ol>
-                    <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}">  
+                    <img src="${pokemon.photo}" alt="${pokemon.name}">  
             </div>
         </li>
     `
