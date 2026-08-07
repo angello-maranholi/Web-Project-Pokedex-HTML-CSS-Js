@@ -16,10 +16,9 @@ function PokemonToLi(pokemon) {
               
             <div class="detail">
                 <ol class="types">
-                    <li class="type">${pokemon.type}</li>
-                    <li class="type">${pokemon.types}</li>
+                    ${pokemon.types.map((type) => `<li class="type">${type}</li>`).join('')}
                 </ol>
-                    <img src="${pokemon.photo}" alt="${pokemon.name}">  
+                <img src="${pokemon.photo}" alt="${pokemon.name}">  
             </div>
         </li>
     `
