@@ -42,7 +42,6 @@
     margin: 0;
     list-style: none;
     min-width: 60px;
-    
 }
 
 .pokemon .detail .types .type {
@@ -52,11 +51,11 @@
     font-size: 0.625rem;
     border-radius: 0.5rem;
     text-align: center;
-    
+    filter: brightness(1.1);
 }
 
 /* descobrir o funcionamento disso aqui: 
-filter: brightness(2.1);
+
 */
 
 .pokemon .detail img{
@@ -70,7 +69,7 @@ filter: brightness(2.1);
 /* responsividade de telas por tamanho médio e grande, e o padrão é mobile */
 
 @media screen and (min-width: 400px) {
-    .pokemons{
+    .pokemonList{
         grid-template-columns: 1fr 1fr;
     } 
     .content{
@@ -80,7 +79,7 @@ filter: brightness(2.1);
 }
 
 @media screen and (min-width: 576px) {
-    .pokemons{
+    .pokemonList{
         grid-template-columns: 1fr 1fr 1fr;
     } 
     .pokemon .name {
@@ -93,7 +92,7 @@ filter: brightness(2.1);
 }
 
 @media screen and (min-width: 992px) {
-    .pokemons{
+    .pokemonList{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     } 
     .pokemon .name {
@@ -110,7 +109,7 @@ filter: brightness(2.1);
 cores dos pokemons por tipo
 
 .normal {
-    background-color: #a6a877;
+    background-color: #bb8c4e;
 }
 .grass {
     background-color: #77c850;
