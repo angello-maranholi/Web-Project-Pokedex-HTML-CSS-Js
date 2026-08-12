@@ -1,0 +1,40 @@
+
+/* responsividade de telas por tamanho médio e grande, e o padrão é mobile */
+
+@media screen and (min-width: 400px) {
+    .pokemonList{
+        grid-template-columns: 1fr 1fr;
+    } 
+    .content{
+        text-align: center;
+        border-radius: 1rem;
+    } 
+}
+
+@media screen and (min-width: 576px) {
+    .pokemonList{
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+    .pokemon .name {
+        padding: 0.5rem;
+    }
+    .content{
+        text-align: center;
+        border-radius: 1rem;
+    } 
+}
+
+@media screen and (min-width: 992px) {
+    .pokemonList{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } 
+    .pokemon .name {
+        padding: 0.5rem;
+    }
+    .content{
+        margin: 1rem auto;
+        max-width: 960px;
+        text-align: center;
+        border-radius: 1rem;
+    } 
+}
