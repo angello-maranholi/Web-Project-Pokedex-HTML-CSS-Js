@@ -54,10 +54,6 @@
     filter: brightness(1.1);
 }
 
-/* descobrir o funcionamento disso aqui: 
-
-*/
-
 .pokemon .detail img{
     max-width: 100%;
     width: auto;
@@ -106,10 +102,10 @@
     } 
 }
 
-cores dos pokemons por tipo
+/* cores dos pokemons por tipo */
 
 .normal {
-    background-color: #bb8c4e;
+    background-color: #a6a877;
 }
 .grass {
     background-color: #77c850;
