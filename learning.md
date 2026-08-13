@@ -28,3 +28,25 @@ função MAP simplificada
  pokemonList.innerHTML += listItem;
 
 **Função MAP super simplificada - por padrão cada item percorrido pelo MAP é convertido diretamente em um item HTML da lista, sem precisar criar uma variável para adicionar. De forma mais simples ainda, o join ja executa a junção dos itens sem a vírgula de forma direta, eliminando a criação de outra variável, e tudo isso é passado diretamente para o innerHTMl, que tem a função de inserir o conteúdo manipulado aqui diretamente no corpo do HTML da página, através da ID do elemento, neste caso a pokemonList. 
+
+
+// function PokemonToLi(pokemon) {
+//     return ` 
+//         <li class="pokemon ${pokemon.type}">
+//             <span class="number">#${pokemon.number}</span>
+//             <span class="name">${pokemon.name}</span>
+              
+//             <div class="detail">
+//                 <ol class="types">
+//                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+//                 </ol>
+//                 <img src="${pokemon.photo}" alt="${pokemon.name}">  
+//             </div>
+//         </li>
+//     `
+// }
+
+// pokeApi.getPokemons().then((pokemons = []) => {
+//         pokemonList.innerHTML += pokemons.map(PokemonToLi).join('');
+// //função MAP super simplificada para substituir o FOR
+// })
