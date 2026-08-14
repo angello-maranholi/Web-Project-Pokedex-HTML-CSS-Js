@@ -32,19 +32,21 @@ Desenvolver uma aplicação completa no front-end consumindo dados de uma API ex
 
 ### Como executar o projeto:
 
-EM BREVE
+- Este projeto não está hospedado ainda, dessa forma para executá-lo será necessário utilizar o localhost, através de fork do repositório.
+- Logo abaixo está o GIF de apresentação da primeira etapa do projeto, que é a landing page.
+- Próxima etapa: Página de detalhes dos pokemons individual, criada dinamicamente.
 
 ### Diferenciais e Aprendizados:
 
-Consumo de API real (PokéAPI)
-Uso de JavaScript assíncrono 
-Manipulação dinâmica do DOM
-Integração entre dados externos e interface
-Desenvolvimento de aplicação completa no front-end
-Evolução na construção de projetos interativos
+- Consumo de API real (PokéAPI)
+- Uso de JavaScript assíncrono 
+- Manipulação dinâmica do DOM
+- Integração entre dados externos e interface
+- Desenvolvimento de aplicação completa no front-end
+- Evolução na construção de projetos interativos
 
 ### Preview do projeto:
 
-EM  BREVE
+![Preview do projeto](./Pokedex.gif)
 
 Autor: Angello Maranholi
