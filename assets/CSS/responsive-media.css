@@ -1,6 +1,4 @@
 
-/* responsividade de telas por tamanho médio e grande, e o padrão é mobile */
-
 @media screen and (min-width: 400px) {
     .pokemonList{
         grid-template-columns: 1fr 1fr;

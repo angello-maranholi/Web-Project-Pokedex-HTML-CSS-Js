@@ -1,0 +1,59 @@
+
+
+@media screen and (min-width: 400px) {
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        font-size: 1rem;
+    }
+    .pokeImg{
+        grid-template-columns: 1fr;
+    } 
+    .pokeReferences{
+        text-align: left;
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 0.5rem;
+        border: 1rem;
+    } 
+}
+
+@media screen and (min-width: 576px) {
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        font-size: 2rem;
+    }
+    .pokeImg{
+        grid-template-columns: 1fr;
+    } 
+    .pokeReferences{
+        text-align: left;
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 0.5rem;
+        border: 1rem;
+    } 
+}
+
+@media screen and (min-width: 992px) {
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        font-size: 5rem;
+    }
+    .pokeImg{
+        grid-template-columns: 1fr;
+    } 
+    .pokeReferences{
+        text-align: left;
+        font-size: 5rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 0.5rem;
+        border: 1rem;
+    } 
+}
