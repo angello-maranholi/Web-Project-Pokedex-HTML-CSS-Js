@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/CSS/styles-details.css">
     <link rel="stylesheet" href="assets/CSS/type-colors.css">
     <link rel="stylesheet" href="assets/CSS/responsive-media-pokedetail.css">
 </head>
@@ -23,17 +24,23 @@
         <span class="pokeImg"><img src="img/pokeball.png" alt="Pokeball"></span>
         <div id="pokeReference" class="pokeReferences">
             <ol class="pokeRefer">
-                        <li class="pokeBar">Strong</li>
-                        <li class="pokeBar">Weight</li>
-                        <li class="pokeBar">Speed</li>
-                        <li class="pokeBar">Attack</li>
-                        <li class="pokeBar">Special Attack</li>
-                        <li class="pokeBar">Damage</li>
+                        <li class="pokeBar">hp</li>
+                        <li class="pokeBar">attack</li>
+                        <li class="pokeBar">defense</li>
+                        <li class="pokeBar">special-attack</li>
+                        <li class="pokeBar">special-defense</li>
+                        <li class="pokeBar">speed</li>
+                        <li class="pokeBar">weight</li>
                     </ol>
         </div>
-        <button id="nextPokemon" type="button">
-            Next Pokemon
-        </button>        
+        <nav class="footBarButton">
+            <button id="nextPokemon" type="button" class="BarButtonPokemon">Next Pokemon</button> 
+            <a id="homePokemon" class="BarButtonPokemon" href="index.html">Back Home</a>
+        </nav>        
     </section>
+     <!-- Arquivo Js -->
+    <script src="assets/Js/poke-object.js"></script>
+    <script src="assets/Js/poke-api.js"></script>
+    <script src="assets/Js/main.js"></script>
 </body>
 </html>
