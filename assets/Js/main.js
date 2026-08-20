@@ -1,6 +1,9 @@
 
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const pokeName = document.getElementById('pokeName')
+const pokeNumber = document.getElementById('pokeNumber')
+const pokeImage = document.getElementById('pokeImage')
 const maxRecords = 1154;
 const limit = 12;
 let offset = 0;
@@ -36,3 +39,24 @@ loadMoreButton.addEventListener('click', () => {
     } else {
     loadMorePokemons(offset, limit);
 }})
+
+function pokeDetailComplete(pokemon) {
+        pokeName.innerText = pokemon.name;
+        pokeNumber.innerText = `#${pokemon.number}`;
+        pokeImage.innerHTML = `<img src="${pokemon.photo}" alt="${pokemon.name}">`;
+        }
+        
+// function pokeReferenceComplete(pokemon) {
+//     pokeApi.getDetails = (pokemon) => { 
+//         pokeReference.innerHTML = 
+//         `<ul class="pokeRefer">
+//             <li class="pokeBar">hp</li>
+//             <li class="pokeBar">attack</li>
+//             <li class="pokeBar">defense</li>
+//             <li class="pokeBar">special-attack</li>
+//             <li class="pokeBar">special-defense</li>
+//             <li class="pokeBar">speed</li>
+//             <li class="pokeBar">weight</li>
+//         </ul>`
+// }}
+

@@ -20,10 +20,13 @@
 </head>
 <body>
     <section class="content">
-        <h1>Pokemon Name</h1>
-        <span class="pokeImg"><img src="img/pokeball.png" alt="Pokeball"></span>
+        <div id="pokeHeader" class="pokeHeader">
+            <span id="pokeName" class="pokeName">Pokemon Name</span>
+            <span id="pokeNumber" class="pokeId">#000</span>
+            <figure id="pokeImage" class="pokeImg"><img src="img/pokeball.png" alt="Pokeball"></figure>
+        </div>
         <div id="pokeReference" class="pokeReferences">
-            <ol class="pokeRefer">
+            <ul class="pokeRefer">
                         <li class="pokeBar">hp</li>
                         <li class="pokeBar">attack</li>
                         <li class="pokeBar">defense</li>
@@ -31,12 +34,12 @@
                         <li class="pokeBar">special-defense</li>
                         <li class="pokeBar">speed</li>
                         <li class="pokeBar">weight</li>
-                    </ol>
+            </ul>
         </div>
-        <nav class="footBarButton">
+        <div class="footBarButton">
             <button id="nextPokemon" type="button" class="BarButtonPokemon">Next Pokemon</button> 
-            <a id="homePokemon" class="BarButtonPokemon" href="index.html">Back Home</a>
-        </nav>        
+            <a class="BarButtonPokemon" href="index.html">Back Home</a>
+        </div>        
     </section>
      <!-- Arquivo Js -->
     <script src="assets/Js/poke-object.js"></script>

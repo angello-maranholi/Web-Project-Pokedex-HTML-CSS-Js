@@ -43,14 +43,14 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        font-size: 5rem;
+        font-size: 2rem;
     }
     .pokeImg{
         grid-template-columns: 1fr;
     } 
     .pokeReferences{
         text-align: left;
-        font-size: 5rem;
+        font-size: 2rem;
         border-radius: 1rem;
         margin: 1rem;
         padding: 0.5rem;
