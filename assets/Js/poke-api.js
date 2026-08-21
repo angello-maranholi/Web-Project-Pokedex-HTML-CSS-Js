@@ -23,10 +23,21 @@ function pokeDetailtoPokemon(pokeDetail) {
     return pokemon
 }
 
-pokeApi.getDetails = (pokemon) => {
-    return fetch(pokemon.url)
+// pokeApi.getDetails = (pokemon) => {
+//     return fetch(pokemon.url)
+//         .then((response) => response.json())
+//         .then(pokeDetailtoPokemon)
+// }
+
+// pokeApi.getPokemonById = (id) => {
+//     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+// }
+
+pokeApi.getDetails = (id) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    return fetch(url)
         .then((response) => response.json())
-        .then(pokeDetailtoPokemon)
+        .then(pokeDetailtoPokemon);
 }
 
 pokeApi.getPokemons = (offset = 0, limit = 12) => {

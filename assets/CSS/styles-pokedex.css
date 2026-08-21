@@ -17,6 +17,12 @@
     min-height: 120px;
 }
 
+.pokemon a{
+    text-decoration: none;
+    color: inherit;
+    /* para retirar sublinhado e cor de links */
+}
+
 .pokemon .number {
     color: black;
     opacity: 0.3;
